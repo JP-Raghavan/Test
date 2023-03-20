@@ -20,6 +20,51 @@
 			background-color: #ddd;
 		}
 		.item.active {
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<h1>Dashboard</h1>
+	<h2>Toggle the items below:</h2>
+	
+	<div>
+		<label><input type="checkbox" name="item1" onclick="toggleItem('item1')">Item 1</label>
+		<div id="item1-users"></div>
+	</div>
+	
+	<div>
+		<label><input type="checkbox" name="item2" onclick="toggleItem('item2')">Item 2</label>
+		<div id="item2-users"></div>
+	</div>
+	
+	<div>
+		<label><input type="checkbox" name="item3" onclick="toggleItem('item3')">Item 3</label>
+		<div id="item3-users"></div>
+	</div>
+	
+	<div>
+		<label><input type="checkbox" name="item4" onclick="toggleItem('item4')">Item 4</label>
+		<div id="item4-users"></div>
+	</div>
+	
+	<script>
+		function toggleItem(item) {
+			var users = document.getElementById(item + '-users');
+			var username = prompt('Enter your name:');
+			
+			if (username) {
+				if (users.innerHTML.includes(username)) {
+					users.innerHTML = users.innerHTML.replace(username + ', ', '');
+				} else {
+					users.innerHTML += username + ', ';
+				}
+			}
+		}
+	</script>
+</body>
+</html>
 			background-color: #00c853;
 			color: #fff;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
