@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>My Dashboard</title>
@@ -20,35 +19,11 @@
 			background-color: #ddd;
 		}
 		.item.active {
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dashboard</title>
-</head>
-<body>
-	<h1>Dashboard</h1>
-	<h2>Toggle the items below:</h2>
-	
-	<div>
-		<label><input type="checkbox" name="item1" onclick="toggleItem('item1')">Item 1</label>
-		<div id="item1-users"></div>
-	</div>
-	
-	<div>
-		<label><input type="checkbox" name="item2" onclick="toggleItem('item2')">Item 2</label>
-		<div id="item2-users"></div>
-	</div>
-	
-	<div>
-		<label><input type="checkbox" name="item3" onclick="toggleItem('item3')">Item 3</label>
-		<div id="item3-users"></div>
-	</div>
-	
-	<div>
-		<label><input type="checkbox" name="item4" onclick="toggleItem('item4')">Item 4</label>
-		<div id="item4-users"></div>
-	</div>
-	
+			background-color: #00c853;
+			color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+	</style>
 	<script>
 		function toggleItem(item) {
 			var users = document.getElementById(item + '-users');
@@ -63,31 +38,13 @@
 			}
 		}
 	</script>
-</body>
-</html>
-			background-color: #00c853;
-			color: #fff;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-		}
-	</style>
-	<script>
-		function toggleActive(element) {
-			const items = document.querySelectorAll('.item');
-			items.forEach(item => {
-				if (item !== element) {
-					item.classList.remove('active');
-				}
-			});
-			element.classList.toggle('active');
-		}
-	</script>
 </head>
 <body>
 	<div class="container">
-		<div class="item" onclick="toggleActive(this)">Item 1</div>
-		<div class="item" onclick="toggleActive(this)">Item 2</div>
-		<div class="item" onclick="toggleActive(this)">Item 3</div>
-		<div class="item" onclick="toggleActive(this)">Item 4</div>
+		<div class="item" onclick="toggleActive(this)">VM80</div>
+		<div class="item" onclick="toggleActive(this)">VM81</div>
+		<div class="item" onclick="toggleActive(this)">VM82</div>
+		<div class="item" onclick="toggleActive(this)">VM83</div>
 	</div>
 </body>
 </html>
